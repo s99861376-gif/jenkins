@@ -17,6 +17,7 @@ prediction = model.predict([[4]])[0]
 print(f"Prediction: {prediction:.1f}(Expected: 8.0)")
 if abs(prediction - 8.0) < 0.1:
     print("Test passed.")
+    sys.exit(0)
 else:
     print("Test failed.")
-sys.exit(0)
+    sys.exit(1)
